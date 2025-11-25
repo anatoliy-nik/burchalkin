@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Quicksand-Medium";
   src: url("../fonts/Quicksand-Medium.woff2") format("woff2");
@@ -68,9 +69,10 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1320px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  border: 1px dotted #ccc;
 }
 
 .accent-btn {
@@ -101,14 +103,43 @@ body {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 50px;
   color: #fe3e57;
   font-family: "Quicksand-Medium", sans-serif;
   font-weight: 500;
 }
 
 @media (max-width: 1400px) {
-  h1 {
-    font-size: 50px;
+  .container {
+    max-width: 1140px;
   }
 }
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    /* padding, когда у .container нет max-width
+    а есть только width: 100%; */
+    padding: 0 12px;
+    max-width: 100%;
+  }
+}
+/* Брейкпоинты и max-width у .container (как в ориг. Bootstrap 5) 
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 1400px) { .container { max-width: 1320px; } } */
