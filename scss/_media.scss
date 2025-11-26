@@ -1,29 +1,33 @@
 @media (max-width: 1400px) {
-    .container {
-        max-width: 1140px;
+    .bn-container {
+        // max-width: 1140px;
+        max-width: 1116px;
     }
 }
 
 @media (max-width: 1200px) {
-    .container {
-        max-width: 960px;
+    .bn-container {
+        // max-width: 960px;
+        max-width: 936px;
     }
 }
 
 @media (max-width: 992px) {
-    .container {
-        max-width: 720px;
+    .bn-container {
+        // max-width: 720px;
+        max-width: 696px;
     }
 }
 
 @media (max-width: 768px) {
-    .container {
-        max-width: 540px;
+    .bn-container {
+        // max-width: 540px;
+        max-width: 516px;
     }
 }
 
 @media (max-width: 576px) {
-    .container {
+    .bn-container {
         /* padding, когда у .container нет max-width
         а есть только width: 100%; */
         padding: 0 12px;
