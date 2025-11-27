@@ -135,7 +135,7 @@ body {
   background-image: url(../img/header-main.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: contain;
+  background-size: cover;
   height: 500px;
 }
 .header-main .bn-container {
