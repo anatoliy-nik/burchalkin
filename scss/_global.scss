@@ -1,17 +1,17 @@
 // липкий футер
 
-html, body {
-    height: 100%;
-}
+// html, body {
+//     height: 100%;
+// }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
+// body {
+//     display: flex;
+//     flex-direction: column;
+// }
 
-.main {
-    flex-grow: 1;
-}
+// .main {
+//     flex-grow: 1;
+// }
 
 // visually-hidden
 
@@ -34,10 +34,10 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    color: #1e2a2a;
+    color: $black-color;
 }
 
-.bn-container {
+.nb-container {
     // max-width: 1320px; 
     //у Бутстрап есть еще padding: 0 12px в контейнере
     //поэтому убираю 24px, т.е 1320px-24px=1296px

@@ -61,26 +61,6 @@ a {
   text-decoration: none;
 }
 
-html, body {
-  height: 100%;
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.main {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -101,7 +81,7 @@ body {
   color: #1e2a2a;
 }
 
-.bn-container {
+.nb-container {
   max-width: 1296px;
   width: 100%;
   margin: 0 auto;
@@ -120,7 +100,7 @@ body {
 }
 
 /* header */
-.header .bn-container {
+.header .nb-container {
   position: relative;
 }
 
@@ -138,12 +118,19 @@ body {
   background-size: cover;
   height: 500px;
 }
-.header-main .bn-container {
+.header-main .nb-container {
   position: relative;
   height: 100%;
   z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.header-main .bn-container::before {
+.header-main .nb-container::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -159,7 +146,7 @@ body {
   font-size: 64px;
   text-align: center;
   color: #ebe4d4;
-  margin-top: 25px;
+  margin-top: 34px;
 }
 .header-main h2 {
   font-family: "Kobzar KS";
@@ -171,14 +158,12 @@ body {
 }
 .header-main h3 {
   font-size: 14px;
+  margin: 0 auto;
+  margin-top: auto; /* ← толкает элемент вниз */
+  margin-bottom: 50px;
   color: #ebe4d4;
   font-weight: 400;
   width: 600px;
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .top-contacts {
@@ -241,28 +226,82 @@ body {
   color: #ebe4d4;
 }
 
+/* welcome */
+.welcome {
+  padding: 60px 0;
+  background: #fbf9ef;
+  position: relative;
+}
+.welcome__text {
+  width: 635px;
+}
+.welcome h2 {
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+.welcome__text {
+  font-size: 20px;
+  z-index: 1;
+}
+.welcome__text p + p {
+  margin-top: 28px;
+}
+.welcome .nb-container {
+  position: relative;
+}
+.welcome__img {
+  position: absolute;
+  z-index: 1;
+  right: 35px;
+  bottom: -60px;
+}
+.welcome__img img {
+  width: 450px;
+  height: 570px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.welcome__out-right {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  bottom: 60px;
+  width: 43%;
+  background-color: #ebe4d4;
+  z-index: 0;
+}
+
+/* footer */
+.footer {
+  height: 480px;
+  background-color: #e3d9c4;
+}
+
 @media (max-width: 1400px) {
-  .bn-container {
+  .nb-container {
     max-width: 1116px;
   }
 }
 @media (max-width: 1200px) {
-  .bn-container {
+  .nb-container {
     max-width: 936px;
   }
 }
 @media (max-width: 992px) {
-  .bn-container {
+  .nb-container {
     max-width: 696px;
   }
 }
 @media (max-width: 768px) {
-  .bn-container {
+  .nb-container {
     max-width: 516px;
   }
 }
-@media (max-width: 576px) {
-  .bn-container {
+@media (max-width: 540px) {
+  /* переопределил стандартный брейкпоинт 576px
+      чтобы не было скачка - сужения контейнера */
+  .nb-container {
     /* padding, когда у .container нет max-width
     а есть только width: 100%; */
     padding: 0 12px;

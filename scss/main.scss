@@ -6,7 +6,7 @@
 /* header */
 
 .header {
-    .bn-container {
+    .nb-container {
         position: relative;
     }
 }
@@ -24,12 +24,14 @@
     background-position: top center;
     background-size: cover;
     height: 500px;
-    .bn-container {
+    .nb-container {
         position: relative;
         height: 100%;
         z-index: 0;
+        display: flex;
+        flex-direction: column;
     }
-    .bn-container::before {
+    .nb-container::before {
         content: '';
         position: absolute;
         width: 100%;
@@ -45,7 +47,7 @@
         font-size: 64px;
         text-align: center;
         color: $white-color;
-        margin-top: 25px;
+        margin-top: 34px;
     }
     h2 {
         font-family: 'Kobzar KS';
@@ -57,14 +59,16 @@
     }
     h3 {
         font-size: 14px;
-        // text-align: center;
+        margin: 0 auto;
+        margin-top: auto;     /* ← толкает элемент вниз */
+        margin-bottom: 50px;
         color: $white-color;
         font-weight: 400;
         width: 600px;
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
+        // position: absolute;
+        // bottom: 50px;
+        // left: 50%;
+        // transform: translateX(-50%);
     }
 }
 
@@ -114,6 +118,69 @@
     &__link {
         color: $white-color;
     }
+}
+
+/* welcome */
+
+.welcome {
+    padding: 60px 0;
+    background: #fbf9ef;
+    position: relative;
+    &__text {
+        width: 635px;
+    }
+    h2 {
+        font-size: 42px;
+        font-weight: 400;
+        margin-bottom: 14px;
+    }
+    &__text {
+        font-size: 20px;
+        z-index: 1;
+        p + p {
+            margin-top: 28px;
+        }
+    }
+    .nb-container {
+        position: relative;
+    }
+    &__img {
+        position: absolute;
+        z-index: 1;
+        right: 35px;
+        bottom: -60px;
+        img {
+            width: 450px;
+            height: 570px;
+            object-fit: cover;
+        }  
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     background-color: red;
+        //     width: 50px;
+        //     height: 50px;
+        // }
+    }
+    &__out-right {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        bottom: 60px;
+        width: 43%;
+        background-color: #ebe4d4;
+        z-index: 0;
+    }
+}
+
+
+/* footer */
+
+.footer {
+    height: 480px;
+    background-color: #e3d9c4;
 }
 
 @import '_media.scss'
