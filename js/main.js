@@ -12,6 +12,7 @@ $(function(){
         infinite: false,
         slidesToShow: 2,
         slidesToScroll: 2,
+        variableWidth: true,
         autoplay: false
     });
 
