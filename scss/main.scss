@@ -394,6 +394,132 @@
     }
 }
 
+/* s-concept */
+
+.s-concept {
+    padding: 70px 0;
+    background-color: $white-color;
+        h2 {
+        font-weight: 400;
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.concept {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 132px);
+    gap: 24px;
+        div {
+        background-color: #e3d9c4;
+        border: 1px solid #bc5f04;
+        display: flex;
+        align-items: center;
+        padding: 0 32px;
+        font-size: 20px;
+        }
+        div.concept__img {
+            padding: 0;
+            border: none;
+        }
+        div[class*="left"] {
+            justify-content: flex-end;
+            text-align: right;
+        }
+    &__top-left {
+        grid-column: 1 / 7;
+        grid-row: 1;
+    }  /* колонки с 1 по 2, строка 1 */
+    &__top-right {
+        grid-column: 7 / 13;
+        grid-row: 1;
+    }  /* колонки с 3 по 4, строка 1 */
+    &__img {
+        grid-column: 6 / 8;
+        grid-row: 2 / 5;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__middle-left-1 {
+        grid-column: 1 / 6;
+        grid-row: 2;
+    }
+    &__middle-left-2 {
+        grid-column: 1 / 6;
+        grid-row: 3;
+    }
+    &__middle-left-3 {
+        grid-column: 1 / 6;
+        grid-row: 4;
+    }
+    &__middle-right-1 {
+        grid-column: 8 / 13;
+        grid-row: 2;
+    }
+    &__middle-right-2 {
+        grid-column: 8 / 13;
+        grid-row: 3;
+    }
+    &__middle-right-3 {
+        grid-column: 8 / 13;
+        grid-row: 4;
+    }
+    &__bottom-left {
+        grid-column: 1 / 7;
+        grid-row: 5;
+    }
+    &__bottom-right {
+        grid-column: 7 / 13;
+        grid-row: 5;
+    }
+}
+
+/* s-info */
+
+.s-info {
+    padding: 12px 0;
+    position: relative;
+
+    &__left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: $blue-color;
+        z-index: -1;
+    }
+    &__right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url(../img/info.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    &__content {
+        width:50%;
+        font-size: 20px;
+        color: #ebe4d4;
+        border: 1px solid #bc5f04;
+        border-right: none;
+        padding: 38px
+    }
+    h3 {
+        font-weight: 700;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+}
+
 /* footer */
 
 .footer {
