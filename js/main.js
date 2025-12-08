@@ -16,4 +16,11 @@ $(function(){
         autoplay: false
     });
 
+    $('.reviews-list').slick({
+        arrows: true,
+        dots: true,
+        infinite: false,
+        autoplay: false
+    });
+
 });

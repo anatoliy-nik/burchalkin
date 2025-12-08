@@ -520,6 +520,110 @@
     }
 }
 
+/* s-info */
+
+.s-reviews {
+    padding: 60px 0 120px 0;
+    h2 {
+        font-weight: 400;
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+.reviews-list {
+    margin: 0 auto;
+    width: 80%;
+    &__item-author {
+        font-weight: 600;
+        font-size: 20px;
+        color: #383838;
+        display: block;
+    }
+    &__item-date {
+        font-style: italic;
+        color: #383838;
+        display: block;
+        margin-bottom: 30px;
+    }
+    &__item-text {
+        font-weight: 300;
+        font-size: 24px;
+        color: #383838;
+        position: relative;
+        padding: 0 40px;
+        &::before {
+            content: '"';
+            position: absolute;
+            font-size: 58px;
+            font-style: italic;
+            top: -16px;
+            left: -10px;
+        }
+        &::after {
+            content: '"';
+            position: absolute;
+            font-size: 58px;
+            font-style: italic;
+            bottom: -44px;
+            right: 10px;
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        color: transparent;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .slick-prev {
+        background-image: url(../img/icons/news-chevron-left.svg);
+        left: -86px;
+    }
+    .slick-next {
+        background-image: url(../img/icons/news-chevron-right.svg);
+        right: -86px;
+    }
+    .slick-disabled {
+        border: 1px solid red;
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        .slick-active {
+            border: 1px solid green;
+        }
+        li {
+            margin: 0 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            border: none;
+            color: transparent;
+            background-color: transparent;
+            height: 18px;
+            width: 18px;
+            cursor: pointer;
+            background-image: url(../img/icons/news-dot.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+
 /* footer */
 
 .footer {

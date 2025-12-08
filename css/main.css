@@ -79,6 +79,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #1e2a2a;
+  background-color: #fbf9ef;
 }
 
 .nb-container {
@@ -675,6 +676,121 @@ section {
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 20px;
+}
+
+/* s-info */
+.s-reviews {
+  padding: 60px 0 120px 0;
+}
+.s-reviews h2 {
+  font-weight: 400;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.reviews-list {
+  margin: 0 auto;
+  width: 80%;
+}
+.reviews-list__item-author {
+  font-weight: 600;
+  font-size: 20px;
+  color: #383838;
+  display: block;
+}
+.reviews-list__item-date {
+  font-style: italic;
+  color: #383838;
+  display: block;
+  margin-bottom: 30px;
+}
+.reviews-list__item-text {
+  font-weight: 300;
+  font-size: 24px;
+  color: #383838;
+  position: relative;
+  padding: 0 40px;
+}
+.reviews-list__item-text::before {
+  content: '"';
+  position: absolute;
+  font-size: 58px;
+  font-style: italic;
+  top: -16px;
+  left: -10px;
+}
+.reviews-list__item-text::after {
+  content: '"';
+  position: absolute;
+  font-size: 58px;
+  font-style: italic;
+  bottom: -44px;
+  right: 10px;
+}
+.reviews-list .slick-arrow {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.reviews-list .slick-prev {
+  background-image: url(../img/icons/news-chevron-left.svg);
+  left: -86px;
+}
+.reviews-list .slick-next {
+  background-image: url(../img/icons/news-chevron-right.svg);
+  right: -86px;
+}
+.reviews-list .slick-disabled {
+  border: 1px solid red;
+}
+.reviews-list .slick-dots {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reviews-list .slick-dots .slick-active {
+  border: 1px solid green;
+}
+.reviews-list .slick-dots li {
+  margin: 0 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reviews-list .slick-dots button {
+  border: none;
+  color: transparent;
+  background-color: transparent;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  background-image: url(../img/icons/news-dot.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* footer */
