@@ -30,6 +30,24 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(../fonts/RobotoCyrillic.woff2) format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(../fonts/RobotoLatin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 *,
 *::before,
 *::after {
@@ -105,7 +123,7 @@ section {
   color: #5b2333;
 }
 
-/* header */
+/* --------header-------- */
 .header .nb-container {
   position: relative;
 }
@@ -165,7 +183,7 @@ section {
 .header-main h3 {
   font-size: 14px;
   margin: 0 auto;
-  margin-top: auto; /* ← толкает элемент вниз */
+  margin-top: auto;
   margin-bottom: 50px;
   color: #ebe4d4;
   font-weight: 400;
@@ -232,7 +250,7 @@ section {
   color: #ebe4d4;
 }
 
-/* welcome */
+/* --------welcome-------- */
 .s-welcome {
   padding: 60px 0;
   background: #fbf9ef;
@@ -278,7 +296,7 @@ section {
   z-index: 0;
 }
 
-/* write-us */
+/* --------write-us-------- */
 .s-writeus {
   padding: 80px 0;
   background-color: #fbf9ef;
@@ -314,7 +332,6 @@ section {
       -ms-flex: 1;
           flex: 1;
   min-width: 0;
-  /*для корректного сжатия при длинных значениях*/
   background-color: #fbf9ef;
   padding: 24px 30px;
   border: 1px solid #bc5f04;
@@ -362,7 +379,7 @@ section {
   margin: 0 auto;
 }
 
-/* s-news */
+/* --------s-news-------- */
 .s-news {
   padding: 45px 0 110px 0;
   background-color: #404fac;
@@ -384,7 +401,8 @@ section {
           column-gap: 40px;
 }
 .news-list__item {
-  width: 50%;
+  width: 636px;
+  margin-right: 24px;
   border: 8px solid #e3d9c4;
   background-color: #fbf9ef;
   position: relative;
@@ -447,7 +465,6 @@ section {
 .news-list__intro {
   font-size: 20px;
 }
-
 .news-list .slick-arrow {
   position: absolute;
   bottom: -74px;
@@ -514,39 +531,8 @@ section {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.news-list .slick-slide {
-  width: 636px;
-  margin-right: 24px;
-}
 
-.news-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 48px;
-  margin-top: 50px;
-  border: 1px dotted red;
-}
-.news-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 15px;
-}
-.news-nav__item {
-  margin: 0 10px;
-}
-
-/* s-concept */
+/* --------s-concept-------- */
 .s-concept {
   padding: 70px 0;
   background-color: #fbf9ef;
@@ -563,8 +549,6 @@ section {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(5, 132px);
   gap: 24px;
-  /* колонки с 1 по 2, строка 1 */
-  /* колонки с 3 по 4, строка 1 */
 }
 .concept div {
   background-color: #e3d9c4;
@@ -639,7 +623,7 @@ section {
   grid-row: 5;
 }
 
-/* s-info */
+/* --------s-info-------- */
 .s-info {
   padding: 12px 0;
   position: relative;
@@ -678,7 +662,7 @@ section {
   margin-bottom: 20px;
 }
 
-/* s-info */
+/* --------s-info-------- */
 .s-reviews {
   padding: 60px 0 120px 0;
 }
@@ -691,7 +675,7 @@ section {
 
 .reviews-list {
   margin: 0 auto;
-  width: 80%;
+  padding: 0 95px;
 }
 .reviews-list__item-author {
   font-weight: 600;
@@ -730,25 +714,27 @@ section {
 }
 .reviews-list .slick-arrow {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   color: transparent;
   background-color: transparent;
   border: none;
   cursor: pointer;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-size: 70px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 .reviews-list .slick-prev {
+  background-position: left center;
   background-image: url(../img/icons/news-chevron-left.svg);
-  left: -86px;
+  left: 0;
 }
 .reviews-list .slick-next {
+  background-position: right center;
   background-image: url(../img/icons/news-chevron-right.svg);
-  right: -86px;
+  right: 0;
 }
 .reviews-list .slick-disabled {
   border: 1px solid red;
@@ -793,7 +779,99 @@ section {
   background-position: center center;
 }
 
-/* footer */
+/* --------s-work-------- */
+.s-work {
+  padding: 70px 0;
+  background-color: #e3d9c4;
+}
+.s-work h2 {
+  font-weight: 400;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.work-list__item {
+  text-align: center;
+}
+.work-list svg {
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.work-list h3 {
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+.work-list__item-text {
+  font-size: 18px;
+}
+
+/* --------s-office-------- */
+.s-office {
+  padding: 80px 0;
+  text-align: center;
+}
+.s-office h2 {
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.s-office__text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.office {
+  padding: 0 95px;
+}
+.office__item {
+  margin-right: 24px;
+}
+.office__item img {
+  width: 164px;
+  height: 164px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.office .slick-arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 70px;
+}
+.office .slick-prev {
+  left: 0;
+  background-position: left center;
+  background-image: url(../img/icons/news-chevron-left.svg);
+}
+.office .slick-next {
+  right: 0;
+  background-position: right center;
+  background-image: url(../img/icons/news-chevron-right.svg);
+}
+.office .slick-disabled {
+  border: 1px solid red;
+}
+
+/* --------footer-------- */
 .footer {
   height: 480px;
   background-color: #e3d9c4;

@@ -23,4 +23,18 @@ $(function(){
         autoplay: false
     });
 
+    $('.office').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        variableWidth: true,
+        autoplay: false
+    });
+
+    Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    });
+
 });
