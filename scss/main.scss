@@ -694,8 +694,68 @@
 /* --------footer-------- */
 
 .footer {
-    height: 480px;
     background-color: #e3d9c4;
+    padding: 50px 0 20px 0;
+    .saitguru {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15px;
+        a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        span {
+            color: #A7192E;
+        }
+    }
+}
+
+.footer-top {
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
+    // gap: 100px;
+    font-weight: 500;
+    color: #1a202c;
+    border-bottom: 1px solid rgba(72, 98, 132, 0.16);
+    padding-bottom: 10px;
+    &__item {
+        width: 19%;
+    }
+    &__logo {
+        margin-bottom: 20px;
+        display: block;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+    h5 {
+        font-weight: 600;
+        font-size: 20px;
+        color: #1a202c;
+        margin-bottom: 15px;
+    }
+    a {
+       font-weight: 500;
+        color: #1a202c;
+    }
+    .social-list {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        &__item + .social-list__item {
+            margin-left: 20px;
+        }
+        path {
+            fill: #000;
+        }
+    }
+    .accent-btn {
+        margin-bottom: 30px;
+    }
 }
 
 @import '_media.scss'
