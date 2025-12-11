@@ -93,6 +93,21 @@
     &__link {
        color: #ebe4d4;
     }
+    .social-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__item + .social-list__item {
+            margin-left: 24px;
+        }
+        svg {
+            height: 20px;
+            margin-right: 0;
+        }
+        path {
+            fill: #ebe4d4;
+        }
+    }
 }
 
 .menu-wrap {
