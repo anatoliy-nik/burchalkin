@@ -202,6 +202,7 @@ section {
           align-items: center;
   height: 70px;
   color: #ebe4d4;
+  font-size: 14px;
 }
 .top-contacts__item {
   display: -webkit-box;
@@ -227,15 +228,12 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .top-contacts .social-list__item + .social-list__item {
-  margin-left: 24px;
+  margin-left: 20px;
 }
 .top-contacts .social-list svg {
-  height: 20px;
+  height: 18px;
   margin-right: 0;
 }
 .top-contacts .social-list path {
@@ -259,6 +257,9 @@ section {
   margin-left: auto;
 }
 
+.menu {
+  font-size: 18px;
+}
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -957,7 +958,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
 }
 .footer-top .social-list__item + .social-list__item {
   margin-left: 20px;
@@ -966,6 +966,7 @@ section {
   fill: #000;
 }
 .footer-top .accent-btn {
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
