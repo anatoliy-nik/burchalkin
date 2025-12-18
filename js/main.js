@@ -37,4 +37,10 @@ $(function(){
     // Your custom options
     });
 
+    // модальное окно
+    $('[data-modal]').on('click', function() {
+      $($(this).data('modal')).modal();
+      return false;
+    });
+
 });

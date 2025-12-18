@@ -97,6 +97,7 @@ body {
   font-size: 16px;
   color: #1e2a2a;
   background-color: #fbf9ef;
+  overflow: visible !important;
 }
 
 .nb-container {
@@ -325,10 +326,10 @@ p {
   padding: 24px;
   margin-bottom: 24px;
 }
-.main-form h4 {
+.main-form h2 {
   font-size: 42px;
   font-weight: 400;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
   text-align: center;
 }
 .main-form__input-wrap {
@@ -343,6 +344,7 @@ p {
   background-color: #fbf9ef;
   padding: 24px 30px;
   border: 1px solid #bc5f04;
+  outline: none;
 }
 .main-form__input::-moz-placeholder {
   color: #1e2a2a;
@@ -356,6 +358,7 @@ p {
   padding: 24px 30px;
   border: 1px solid #bc5f04;
   resize: none;
+  outline: none;
 }
 .main-form__textarea::-moz-placeholder {
   color: #1e2a2a;
