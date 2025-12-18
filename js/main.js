@@ -6,7 +6,7 @@ $(function(){
     //     $('.burger-btn').toggleClass('burger-btn--active');
     // });
 
-    $('.news-list').slick({
+    $('.s-news .news-list').slick({
         arrows: true,
         dots: true,
         infinite: false,
@@ -16,7 +16,7 @@ $(function(){
         autoplay: false
     });
 
-    $('.reviews-list').slick({
+    $('.s-reviews .reviews-list').slick({
         arrows: true,
         dots: true,
         infinite: false,

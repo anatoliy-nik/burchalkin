@@ -5,11 +5,11 @@
 
 /* --------header-------- */
 
-.header {
-    .nb-container {
-        position: relative;
-    }
-}
+// .header {
+//     .nb-container {
+//         position: relative;
+//     }
+// }
 
 .logo-bg {
     position: absolute;
@@ -21,7 +21,7 @@
 .header-main {
     background-image: url(../img/header-main.jpg);
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center center;
     background-size: cover;
     height: 500px;
     .nb-container {
@@ -65,10 +65,34 @@
         color: #ebe4d4;
         font-weight: 400;
         width: 600px;
-        // position: absolute;
-        // bottom: 50px;
-        // left: 50%;
-        // transform: translateX(-50%);
+    }
+}
+
+.header-page {
+    background-image: url(../img/header-page.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 188px;
+    position: relative;
+    z-index: 0;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #404fac;
+        opacity: 0.6;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .nb-container {
+        position: relative;
+        height: 100%;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -96,12 +120,6 @@
     //    font-size: 15px;
     }
     .social-list {
-        display: flex;
-        align-items: center;
-        // justify-content: space-between;
-        &__item + .social-list__item {
-            margin-left: 20px;
-        }
         svg {
             height: 18px;
             margin-right: 0;
@@ -126,7 +144,7 @@
 }
 
 .menu {
-    font-size: 18px;
+    // font-size: 18px;
     &__list {
         display: flex;
     }
@@ -265,7 +283,7 @@
 
 .news-list {
     display: flex;
-    column-gap: 40px;
+    // column-gap: 40px;
     // margin: 0px 7px;
     &__item {
         width: 636px;
@@ -480,7 +498,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 50%;
+        width: 75%;
         height: 100%;
         background-color: $blue-color;
         z-index: -1;
@@ -489,7 +507,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 50%;
+        width: 25%;
         height: 100%;
         background-image: url(../img/info.jpg);
         background-repeat: no-repeat;
@@ -497,7 +515,7 @@
         background-size: cover;
     }
     &__content {
-        width:50%;
+        width:88%;
         font-size: 20px;
         color: #ebe4d4;
         border: 1px solid #bc5f04;
@@ -709,7 +727,146 @@
 
 }
 
+/* --------page-------- */
+
+.main-page {
+    .nb-container {
+        padding: 40px 0 50px 0;
+    }
+    h1 {
+        font-weight: 600;
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+/* --------page-news-------- */
+
+.main-page {
+    .news-list {
+        // flex-direction: column;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+        row-gap: 24px;
+        &__item {
+            // width: 50%;
+            margin-right: 0;
+        }
+    }
+}
+
+/* --------page-reviews-------- */
+
+.main-page {
+    .reviews-list {
+        padding: 0;
+        &__item {
+            border: 8px solid #e3d9c4;
+            background-color: #fbf9ef;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 24px;
+            padding: 30px;
+        }
+        &__item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border: 1px solid #bc5f04;
+            z-index: -1;
+        }
+    }
+}
+
+/* --------page-contacts-------- */
+
+.contacts-info {
+    border: 8px solid #e3d9c4;
+    background-color: #fbf9ef;
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    text-align: center;
+    width: 636px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: 1px solid #bc5f04;
+        z-index: -1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 244px;
+        height: 14px;
+        background-image: url(../img/icons/news-item-bottom.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    span {
+        position: relative;
+        display: block;
+        margin-top: 8px;
+    }
+    span::before {
+        content: "";
+        position: absolute;
+        top: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 244px;
+        height: 4px;
+        background-image: url(../img/icons/news-item-top.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    h2 {
+        font-weight: 700;
+        font-size: 32px;
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+    &__link {
+        color: $black-color;
+    }
+    .social-list {
+        margin-bottom: 30px;
+        path {
+            fill: #000;
+        }
+    }
+}
+
+
 /* --------footer-------- */
+
+.social-list {
+    display: flex;
+    align-items: center;
+        &__item + .social-list__item {
+            margin-left: 20px;
+        }
+}
 
 .footer {
     background-color: #e3d9c4;
@@ -731,17 +888,14 @@
 }
 
 .footer-top {
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
     display: flex;
     justify-content: space-between;
-    // gap: 100px;
     font-weight: 500;
     color: #1a202c;
     border-bottom: 1px solid rgba(72, 98, 132, 0.16);
     padding-bottom: 10px;
     &__item {
-        width: 19%;
+        width: 20%;
     }
     &__logo {
         margin-bottom: 20px;
@@ -761,11 +915,6 @@
         color: #1a202c;
     }
     .social-list {
-        display: flex;
-        align-items: center;
-        &__item + .social-list__item {
-            margin-left: 20px;
-        }
         path {
             fill: #000;
         }
