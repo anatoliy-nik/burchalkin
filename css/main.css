@@ -258,7 +258,7 @@ p {
   display: flex;
 }
 .menu__item + .menu__item {
-  margin-left: 40px;
+  margin-left: 30px;
 }
 .menu__link {
   color: #ebe4d4;
