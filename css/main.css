@@ -101,14 +101,13 @@ body {
 }
 
 .nb-container {
+  /* max-width: 1320px; 
+  у Бутстрап есть еще padding: 0 12px в контейнере
+  поэтому убираю 24px, т.е 1320px-24px=1296px
+  чтоб получить фактич. ширину контента */
   max-width: 1296px;
   width: 100%;
   margin: 0 auto;
-  border: 1px dotted #ccc;
-}
-
-section {
-  border: 1px dotted #ccc;
 }
 
 .accent-btn {
@@ -264,6 +263,76 @@ p {
   color: #ebe4d4;
 }
 
+/* --------s-popular-------- */
+.s-popular {
+  position: relative;
+  padding: 40px 0;
+}
+.s-popular::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 63%;
+  width: 100%;
+  background-color: #e3d9c4;
+}
+.s-popular h2 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.popular-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+.popular-list__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 25px 25px;
+  justify-content: flex-end;
+  height: 305px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.popular-list__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #404fac;
+  opacity: 0.7;
+  z-index: -1;
+}
+.popular-list__link:hover {
+  border: 1px solid #e9a33b;
+}
+.popular-list__link:hover span {
+  color: #e9a33b;
+}
+.popular-list span {
+  font-size: 16px;
+  color: #ebe4d4;
+  display: block;
+}
+.popular-list__item-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  color: #ebe4d4;
+  margin-bottom: 15px;
+}
+
 /* --------welcome-------- */
 .s-welcome {
   padding: 60px 0;
@@ -376,6 +445,7 @@ p {
 .s-news {
   padding: 45px 0 110px 0;
   background-color: #404fac;
+  border: 1px dotted #404fac;
 }
 .s-news h2 {
   font-weight: 400;
@@ -473,9 +543,6 @@ p {
   transform: translateX(110px);
   background-image: url(../img/icons/news-chevron-right.svg);
 }
-.news-list .slick-disabled {
-  border: 1px solid red;
-}
 .news-list .slick-dots {
   position: absolute;
   bottom: -60px;
@@ -483,9 +550,6 @@ p {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-}
-.news-list .slick-dots .slick-active {
-  border: 1px solid green;
 }
 .news-list .slick-dots li {
   margin: 0 8px;
@@ -622,6 +686,7 @@ p {
   border: 1px solid #bc5f04;
   border-right: none;
   padding: 38px;
+  padding-right: 10%;
 }
 .s-info h3 {
   font-weight: 700;
@@ -702,9 +767,6 @@ p {
   background-image: url(../img/icons/news-chevron-right.svg);
   right: 0;
 }
-.reviews-list .slick-disabled {
-  border: 1px solid red;
-}
 .reviews-list .slick-dots {
   position: absolute;
   bottom: -60px;
@@ -712,9 +774,6 @@ p {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-}
-.reviews-list .slick-dots .slick-active {
-  border: 1px solid green;
 }
 .reviews-list .slick-dots li {
   margin: 0 8px;
@@ -820,10 +879,6 @@ p {
   background-position: right center;
   background-image: url(../img/icons/news-chevron-right.svg);
 }
-.office .slick-disabled {
-  border: 1px solid red;
-}
-
 /* --------page-------- */
 .main-page .nb-container {
   padding: 40px 0 50px 0;

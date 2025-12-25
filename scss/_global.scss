@@ -40,18 +40,18 @@ body {
 }
 
 .nb-container {
-    // max-width: 1320px; 
-    //у Бутстрап есть еще padding: 0 12px в контейнере
-    //поэтому убираю 24px, т.е 1320px-24px=1296px
-    //чтоб получить фактич. ширину контента 
+    /* max-width: 1320px; 
+    у Бутстрап есть еще padding: 0 12px в контейнере
+    поэтому убираю 24px, т.е 1320px-24px=1296px
+    чтоб получить фактич. ширину контента */
     max-width: 1296px;
     width: 100%;
     margin: 0 auto;
-    border: 1px dotted #ccc;
+    // border: 1px dotted #ccc;
 }
 
 section {
-    border: 1px dotted #ccc;
+    // border: 1px dotted #ccc;
 }
 
 .accent-btn {
