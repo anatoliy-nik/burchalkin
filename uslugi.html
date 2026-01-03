@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Нотариус Бурчалкин М.Л.</title>
-    <!-- здесь стили всех плагинов -->
+    <title>Нотариальные действия</title>
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/jquery.modal.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -129,27 +129,263 @@
                             <a class="menu__link" href="#">Лицензия</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Услуги</a>
+                            <a class="menu__link" href="#">Нотариальные действия</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Выезд</a>
                         </li>
                         <li class="menu__item">
                             <a class="menu__link" href="#">Цены</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Новости</a>
+                            <a class="menu__link" href="#">Отзывы</a>
                         </li>
+                        <!-- <li class="menu__item">
+                            <a class="menu__link" href="#">Новости</a>
+                        </li> -->
                         <li class="menu__item">
                             <a class="menu__link" href="#">Контакты</a>
                         </li>
                     </ul>
                 </nav>
-                <button class="accent-btn" type="button">Запись на прием</button>
+                <button class="accent-btn" type="button" data-modal="#main-form">Обратиться к нотариусу</button>
             </div>
         </div>
     </header>
 
     <main class="main-page">
         <div class="nb-container">
-            <h1>Страница</h1>
+            <section class="uslugi-page">
+                <h1>Нотариальные действия</h1>
+                <div class="uslugi-page__box">
+                    <!-- <h2>Общее (для юрлиц и физлиц)</h2> -->
+                    <h3>Удостоверение доверенностей</h3>
+                    <ul class="uslugi-list">
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Машиночитаемая доверенность</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на управление автомобилем</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на продажу автомобиля</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на управление квартирой</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на продажу квартиры</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на представление интересов в суде</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на представление интересов несовершеннолетнего ребенка</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на получение пенсии</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на ведение наследственного дела</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на получение документов</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверенность на распоряжение денежными средствами на счетах</h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>Исполнительная надпись</h3>
+                    <h3>Дистанционные сделки</h3>
+                </div>
+                <div class="uslugi-page__box">
+                    <h2>Физическим лицам</h2>
+                    <h3>Наследство</h3>
+                    <ul class="uslugi-list">
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Оформление наследственных прав</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Доверительное управление наследством</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Наследственный договор</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Удостоверение завещаний</h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>Депозит нотариуса</h3>
+                    <ul class="uslugi-list">
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Принятие в депозит нотариуса</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Депозит нотариуса при банкротстве</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Депозит нотариуса при сделках с недвижимостью</h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>Сделки с недвижимостью</h3>
+                    <ul class="uslugi-list">
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Договор купли-продажи квартиры</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Договор купли-продажи доли в квартире</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Договор дарения квартиры</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Договор дарения доли в квартире</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Уведомление сособственников коммунальной квартиры</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Договор ренты квартиры</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Договор мены</h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>Удостоверение договоров</h3>
+                    <ul class="uslugi-list">
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Договор займа</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Договор залога недвижимости</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Договор ипотеки</h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>Семейные отношения</h3>
+                    <ul class="uslugi-list">
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Оформление брачного договора</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Соглашение о разделе общего имущества</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Заключение алиментного соглашения</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uslugi-page__box">
+                    <h2>Юридическим лицам</h2>
+                    <h3>Корпоративные отношения</h3>
+                    <ul class="uslugi-list">
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Сделки с долями ООО</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Опционный договор</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Опцион на заключение договора</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Опцион на продажу доли ООО</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Нотариальное удостоверение оферты и акцепта</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Удостоверение протокола собрания участников OOO, АО</h4>
+                            </a>
+                        </li>
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Удостоверение факта принятия решения единственным участником OOO, АО</h4>
+                            </a>
+                        </li>                        
+                        <li class="uslugi-list__item">
+                            <a class="uslugi-list__link" href="#">
+                                <h4>Подача форм в налоговые органы</h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>Обеспечение доказательств</h3>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -171,7 +407,7 @@
                 </div>
                 <div class="footer-top__item">
                     <h5>Контакты:</h5>
-                    <p>СПб, Лермонтовский пр. 18, <br>1-й этаж</p>
+                    <p>СПб, Лермонтовский пр. 18,<br>1-й этаж</p>
                     <p><a class="footer-top__link" href="tel:78124183403"> +7 (812) 418-34-03</a><br>
                         <a class="footer-top__link" href="tel:79112998777"> +7 (911) 299-87-77</a>
                     </p>
@@ -179,7 +415,7 @@
                             href="mailto:burchalkin-notary@yandex.ru">burchalkin-notary@yandex.ru</a></p>
                     <p>Пн-Пт: 10:00-19:00<br>
                         Сб: 11:00-17:00<br>
-                        <!-- Вс: выходной-->
+                        <!-- Вс: выходной -->
                     </p>
                 </div>
                 <div class="footer-top__item">
@@ -236,7 +472,7 @@
                             </a>
                         </li>
                     </ul>
-                    <button class="accent-btn" type="button">Обратиться к нотариусу</button>
+                    <button class="accent-btn" type="button" data-modal="#main-form">Обратиться к нотариусу</button>
                     <a class="footer-top__link" href="#">Обработка персональных данных</a><br>
                     <a class="footer-top__link" href="#">Иcпользование cookies</a>
                 </div>
@@ -252,9 +488,22 @@
         </div>
     </footer>
 
+    <form id="main-form" class="main-form" action="#" style="display: none;">
+        <div class="main-form__inner">
+            <h2>Обратиться к нотариусу</h2>
+            <div class="main-form__input-wrap">
+                <input class="main-form__input" type="text" placeholder="Ваше имя*">
+                <input class="main-form__input" type="tel" placeholder="Номер телефона*">
+            </div>
+            <textarea class="main-form__textarea" placeholder="Что вас интересует*"></textarea>
+        </div>
+        <button class="accent-btn" type="submit">Отправить</button>
+    </form>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/fancybox.umd.js"></script>
+    <script src="js/jquery.modal.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

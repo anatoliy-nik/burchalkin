@@ -334,9 +334,9 @@
     }
 }
 
-/* --------s-popular-------- */
+/* --------s-uslugi-------- */
 
-.s-popular {
+.s-uslugi {
     padding: 35px 0 70px 0;
     background-color:#404fac;
         h2 {
@@ -348,30 +348,39 @@
     }
 }
 
-.popular-list {
+.uslugi-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 14px;
-    row-gap: 18px;
+    column-gap: 24px;
+    row-gap: 16px;
     &__link {
         background-color: #fbf9ef;
-        border: 1px solid #bc5f04;
+        // border: 1px solid #bc5f04;
         height: 132px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 35px;
         text-align: center;
+        border: 8px solid #e3d9c4;
+        position: relative;
     }
-    h3 {
+    &__link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: 1px solid #bc5f04;
+    }
+    h3, h4 {
     font-weight: 400;
     font-size: 16px;
     line-height: 135%;
     color: #383838;
     }
 }
-
-
 
 /* --------s-news-------- */
 
@@ -667,7 +676,7 @@
     }
     &__item-text {
         font-weight: 300;
-        font-size: 24px;
+        // font-size: 24px;
         color: #383838;
         position: relative;
         padding: 0 40px;
@@ -964,6 +973,55 @@
         }
     }
 }
+
+/* --------uslugi-page-------- */
+.uslugi-page {
+    h2 {
+        font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+        color: $black-color;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-weight: 700;
+        font-size: 20px;
+        color: $black-color;
+        margin-bottom: 10px;
+    }
+    .uslugi-list {
+        margin-bottom: 25px;
+    }
+    .uslugi-list__link {
+        background-color: #e3d9c4;
+        border: none;
+    }
+    &__box {
+        position: relative;
+        padding-bottom: 25px;
+        margin-bottom: 35px;
+    }
+    &__box::after {
+        content: '';
+        position: absolute;
+        border: 1px solid #bc5f04;
+        width: 66%;
+        height: 7px;
+        background: linear-gradient(90deg, #82551c 0%, #e6b932 50%, #fff59a 75%, #835b21 87.5%, #835b21 93.75%, #835c21 100%);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__box:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    &__box:last-child::after {
+        content: none;
+
+    }
+}
+
 
 
 /* --------footer-------- */

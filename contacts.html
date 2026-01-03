@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Нотариус Бурчалкин М.Л.</title>
-    <!-- здесь стили всех плагинов -->
+    <title>Контакты</title>
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/jquery.modal.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -129,20 +129,26 @@
                             <a class="menu__link" href="#">Лицензия</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Услуги</a>
+                            <a class="menu__link" href="#">Нотариальные действия</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Выезд</a>
                         </li>
                         <li class="menu__item">
                             <a class="menu__link" href="#">Цены</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Новости</a>
+                            <a class="menu__link" href="#">Отзывы</a>
                         </li>
+                        <!-- <li class="menu__item">
+                            <a class="menu__link" href="#">Новости</a>
+                        </li> -->
                         <li class="menu__item">
                             <a class="menu__link" href="#">Контакты</a>
                         </li>
                     </ul>
                 </nav>
-                <button class="accent-btn" type="button">Запись на прием</button>
+                <button class="accent-btn" type="button" data-modal="#main-form">Обратиться к нотариусу</button>
             </div>
         </div>
     </header>
@@ -165,7 +171,7 @@
                     <h2>Адрес</h2>
                     <p>Мы распололагаемся в исторической части Адмиралтейского района Санкт-Петербурга - на Покровском острове.</p>
                     <p>190068, г. Санкт-Петербург,<br>Лермонтовский пр. 18, 1-й этаж</p>
-                    <button class="accent-btn" type="button">Записаться на прием</button>
+                    <button class="accent-btn" type="button" data-modal="#main-form">Обратиться к нотариусу</button>
                 </div>
                 <div class="contacts__item">
                     <h2>Позвонить</h2>
@@ -259,9 +265,8 @@
                 </div>
                 <div class="footer-top__item">
                     <h5>Контакты:</h5>
-                    <p>СПб, Лермонтовский пр. 18, <br>1-й этаж</p>
-                    <p>
-                        <a class="footer-top__link" href="tel:78124183403"> +7 (812) 418-34-03</a><br>
+                    <p>СПб, Лермонтовский пр. 18,<br>1-й этаж</p>
+                    <p><a class="footer-top__link" href="tel:78124183403"> +7 (812) 418-34-03</a><br>
                         <a class="footer-top__link" href="tel:79112998777"> +7 (911) 299-87-77</a>
                     </p>
                     <p><a class="footer-top__link"
@@ -325,7 +330,7 @@
                             </a>
                         </li>
                     </ul>
-                    <button class="accent-btn" type="button">Обратиться к нотариусу</button>
+                    <button class="accent-btn" type="button" data-modal="#main-form">Обратиться к нотариусу</button>
                     <a class="footer-top__link" href="#">Обработка персональных данных</a><br>
                     <a class="footer-top__link" href="#">Иcпользование cookies</a>
                 </div>
@@ -341,9 +346,22 @@
         </div>
     </footer>
 
+    <form id="main-form" class="main-form" action="#" style="display: none;">
+        <div class="main-form__inner">
+            <h2>Обратиться к нотариусу</h2>
+            <div class="main-form__input-wrap">
+                <input class="main-form__input" type="text" placeholder="Ваше имя*">
+                <input class="main-form__input" type="tel" placeholder="Номер телефона*">
+            </div>
+            <textarea class="main-form__textarea" placeholder="Что вас интересует*"></textarea>
+        </div>
+        <button class="accent-btn" type="submit">Отправить</button>
+    </form>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/fancybox.umd.js"></script>
+    <script src="js/jquery.modal.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
