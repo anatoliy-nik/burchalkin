@@ -1,62 +1,314 @@
-@media (max-width: 1400px) {
+@media (max-width: 1399px) {
     .nb-container {
-        // max-width: 1140px;
         max-width: 1116px;
     }
-    // .header-main {
-    //     h1 {
-    //         font-size: 55px;
-    //     }
-    // }
+    .menu-wrap .logo {
+        margin-right: 4px;
+    }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     .nb-container {
-        // max-width: 960px;
         max-width: 936px;
     }
-    // .header-main {
-    //     h1 {
-    //         font-size: 44px;
-    //         margin-top: 52px;
-    //     }
-    //     h2 {
-    //         font-size: 44px;
-    //     }
-    // }
+    .top-contacts {
+        flex-wrap: wrap;
+        padding: 0 100px;
+        margin-bottom: 35px;
+        &__item {
+            width: 50%;
+            justify-content: center;
+        }
+    }
+    .header-main {
+        min-height: 500px;
+    }
+    .menu-wrap {
+        flex-direction: column;
+    }
+    .menu-wrap .logo {
+        position: absolute;
+        left: 0;
+        top: 75px;
+    }
+    .menu-list {
+        margin-bottom: 30px;
+    }
+    .menu-wrap .accent-btn {
+        margin-left: 0;
+    }
+    .header-main h1 {
+        font-size: 60px;
+    }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .nb-container {
-        // max-width: 720px;
         max-width: 696px;
     }
-    // .menu__list {
-    //     display: none;
-    // }
+    .header-main {
+        // height: auto;
+    }
+    .top-contacts {
+        padding: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto;
+        &__item {
+            margin: 5px 0;
+        }
+    }
+    .header-main h1 {
+        font-size: 46px;
+    }
+
+    /* === Mobile MENU === */
+    .menu-wrap {
+        flex-direction: row;
+        justify-content: end;
+    }
+    .main-nav { 
+        order: 1;
+        flex-direction: column;
+        width: 50%;
+    }
+    .toggle-menu {
+        &:checked ~ .burger-btn::before {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        &:checked ~ .burger-btn span {
+            opacity: 0;
+        }
+        &:checked ~ .burger-btn::after {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+        &:checked ~ .menu-list {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .burger-btn {
+        display: flex;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+        z-index: 100;
+        margin: 10px;
+        margin-left: auto;
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color:#ecf0f1;
+            left: 0;
+            transition: all 0.3s;
+        }
+        &::after {
+            bottom: 0;
+        }
+        &::before {
+             top: 0;
+        }
+        span {
+            display: block;
+            height: 2px;
+            background-color:#ecf0f1;
+            transition: all 0.3s;
+            width: 100%;
+        }
+    }
+    .menu-list {
+        display: none;
+        background-color: $blue-color;
+        position: absolute;
+        left: 0;
+        top: 52px;
+        width: 100%;
+        &__item {
+            width: 100%;
+            border-bottom: 1px solid #ebe4d4;
+            position: relative;
+        }
+        &__item:last-child {
+            border-bottom: none;
+        }
+        &__item--submenu > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        /* Отключаем hover-эффекты на мобильных устройствах */
+        &__item--submenu:hover .submenu-list {
+            display: none;
+        }
+        &__item--submenu > div > a::after {
+            display: none;
+        }
+        &__item--submenu {
+            /* flex-direction: column;
+            это вроде не нужно */
+        }
+        &__item--submenu:hover .menu-list__link {
+            color: #ecf0f1;
+        }
+        &__item--active:hover .menu-list__link {
+            // color: #dfd684;
+        }
+        &__item--submenu {
+            .menu-list__link:hover {
+                background-color: #2c3e50;
+                color: #dfd684;
+            }
+        }
+        &__link {
+            // flex-grow: 1;
+            // &:hover {
+            //     background-color: #2c3e50;
+            // }
+        }
+    }
+    .toggle-submenu {
+        display: flex !important;
+        width: 44px;
+        height: 44px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border-left: 1px solid #2c3e50;
+        &:hover, &:focus {
+            outline: none;
+            background-color: #2c3e50;
+        }
+        &:hover .submenu-icon, &:focus .submenu-icon{
+            fill: #dfd684;
+        }
+        .submenu-icon {
+            width: 30px;
+            height: 30px;
+            fill: #ecf0f1;
+            display: block;
+        }
+        .submenu-icon--closed {
+            display: block !important;
+        }
+        .submenu-icon--open {
+            display: none !important; 
+        }
+        &.open .submenu-icon--closed {
+            display: none !important; 
+        }
+        &.open .submenu-icon--open {
+            display: block !important;
+        }
+    }
+    .submenu-list {
+        display: none;
+        background-color: #2c3e50;
+        position: relative;
+        min-width: auto;
+        width: 100%;
+        left: 0;
+        top: 0;
+        &.open {
+            display: flex !important;
+        }
+        &__item {
+            border-bottom: 1px solid #34495e;
+        }
+        &__item:last-child {
+            border-bottom: none;
+        }
+        &__link {
+            padding: 13px 20px 13px 20px;
+        }
+    }
+   /* потом убрать, когда будет двух уровневое меню */
+    .menu-list__item + .menu-list__item {
+        margin-left: 0;
+    }
+    .menu-list__link {
+        padding: 13px 20px;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .nb-container {
-        // max-width: 540px;
         max-width: 516px;
     }
 }
 
-@media (max-width: 540px) {
-    /* переопределил стандартный брейкпоинт 576px
-        чтобы не было скачка - сужения контейнера */
+@media (max-width: 539px) {
     .nb-container {
-        /* padding, когда у .container нет max-width
-        а есть только width: 100%; */
         padding: 0 12px;
         max-width: 100%; 
     }
-}
+    .logo-bg {
+        left: 12px;
+    }
+    .menu-wrap .logo {
+        left: 36px;
+        top: 56px;
+    }
+    .top-contacts {
+        align-items: end;
+        height: 241px;
+        margin-bottom: 20px;
+        &__item {
+            justify-content: start;
+            margin: 8px 0;
+            padding-left: 146px;
+            width: 100%;
+        }
+        &__item:nth-child(1) {
+            // display: none;
+        }
+        svg {
+            display: none;
+        }
+        .social-list svg {
+            display: block;
+            height: 22px;
+            margin-right: 0;
+        }
+        .social-list__item + .social-list__item {
+            margin-left: 10px;
+        }
+    }
+    .menu-wrap .accent-btn {
+        position: absolute;
+        top: 265px;
+        left: 12px;
+        z-index: 1;
+    }
+    .main-nav {
+        width: 100%;
+    }
+    .menu-list {
+        top: 60px;
+    }
+    .header-main h1 {
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+    .header-main h2 {
+        line-height: 1;
+        margin-bottom: 20px; 
+    }
+    .header-main h3 {
+        width: 100%;
+        text-align: center;
 
-/* Брейкпоинты и max-width у .container (как в ориг. Bootstrap 5) 
-@media (min-width: 576px) { .container { max-width: 540px; } }
-@media (min-width: 768px) { .container { max-width: 720px; } }
-@media (min-width: 992px) { .container { max-width: 960px; } }
-@media (min-width: 1200px) { .container { max-width: 1140px; } }
-@media (min-width: 1400px) { .container { max-width: 1320px; } } */
+    }
+    .burger-btn {
+        margin-right: 0;
+    }
+}

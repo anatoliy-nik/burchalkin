@@ -1,10 +1,19 @@
 $(function(){
 
-    // бургер кнопка и меню
-    // $('.burger-btn').on('click', function() {
-    //     $('.menu__list').toggleClass('menu__list--active');
-    //     $('.burger-btn').toggleClass('burger-btn--active');
-    // });
+    $(document).on('click keydown', '.toggle-submenu', function(e) {
+        if (e.type === 'keydown' && e.which !== 13 && e.which !== 32) return;
+
+        e.preventDefault();
+        const $btn = $(this);
+        const $submenu = $btn.closest('.menu-list__item--submenu').find('.submenu-list');
+
+        // Закрываем другие подменю
+        $('.submenu-list.open').not($submenu).removeClass('open').siblings('div').find('.toggle-submenu').removeClass('open');
+
+        // Toggle текущего
+        $submenu.toggleClass('open');
+        $btn.toggleClass('open');
+    });
 
     $('.s-news .news-list').slick({
         arrows: true,
