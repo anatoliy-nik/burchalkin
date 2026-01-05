@@ -22,7 +22,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    min-height: 500px;
+    height: 500px;
     .nb-container {
         position: relative;
         height: 100%;
@@ -46,7 +46,7 @@
         font-size: 64px;
         text-align: center;
         color: #ebe4d4;
-        margin-top: 34px;
+        // margin-top: 34px;
     }
     h2 {
         font-family: 'Kobzar KS';
@@ -99,9 +99,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    // height: 70px;
     color: #ebe4d4;
     font-size: 14px;
+    padding: 25px 0;
+    padding-left: 130px;
+    margin-bottom: 8px;
     &__item {
         display: flex;
         align-items: center;
@@ -127,10 +130,15 @@
 .menu-wrap {
     display: flex;
     align-items: center;
+    padding-left: 130px;
+    margin-bottom: 55px;
     .logo {
         width: 86px;
         height: 86px;
-        margin-right: 60px;
+        margin-right: 44px;
+        position: absolute;
+        top: 56px;
+        left: 0px;
     }
     .accent-btn {
         margin-left: auto;
@@ -144,7 +152,6 @@
     // background-color: #2c3e50; 
     position: relative;
     display: flex;
-    border: 1px dotted gray;
 }
 
 .toggle-menu,
@@ -372,6 +379,7 @@
         font-weight: 400;
         margin-bottom: 15px;
         text-align: center;
+        line-height: 1;
     }
     &__input-wrap {
         display: flex;
@@ -384,7 +392,7 @@
         min-width: 0;  
         //для корректного сжатия при длинных значениях
         background-color: $white-color;
-        padding: 24px 30px;
+        padding: 12px 15px;
         border: 1px solid #bc5f04;
         outline: none;
         &::placeholder {
@@ -394,10 +402,11 @@
     &__textarea {
         width: 100%;
         background-color: $white-color;
-        padding: 24px 30px;
+        padding: 12px 15px;
         border: 1px solid #bc5f04;
         resize: none;
         outline: none;
+        height: 132px;
         &::placeholder {
             color: $black-color;
         }
