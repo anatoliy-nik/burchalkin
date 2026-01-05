@@ -169,6 +169,7 @@ p {
   font-size: 64px;
   text-align: center;
   color: #ebe4d4;
+  padding: 0px 12px;
 }
 .header-main h2 {
   font-family: "Kobzar KS";
@@ -177,15 +178,18 @@ p {
   text-align: center;
   color: #ebe4d4;
   margin-top: 10px;
+  padding: 0px 12px;
 }
 .header-main h3 {
   font-size: 14px;
   margin: 0 auto;
   margin-top: auto;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   color: #ebe4d4;
   font-weight: 400;
-  width: 600px;
+  width: 48%;
+  padding: 0px 12px;
+  text-align: center;
 }
 
 .header-page {
@@ -249,7 +253,7 @@ p {
   display: flex;
   align-items: center;
   padding-left: 130px;
-  margin-bottom: 55px;
+  margin-bottom: 75px;
 }
 .menu-wrap .logo {
   width: 86px;
@@ -1141,7 +1145,7 @@ p {
 
 .footer {
   background-color: #e3d9c4;
-  padding: 50px 0 20px 0;
+  padding: 40px 0 20px 0;
 }
 .footer .saitguru {
   display: flex;
@@ -1192,6 +1196,7 @@ p {
 .footer-top .accent-btn {
   margin-top: 30px;
   margin-bottom: 30px;
+  display: block;
 }
 
 @media (max-width: 1399px) {
@@ -1222,6 +1227,9 @@ p {
   .main-nav {
     margin-bottom: 20px;
   }
+  .footer-top__item {
+    width: 23%;
+  }
 }
 @media (max-width: 1199px) {
   .nb-container {
@@ -1235,6 +1243,9 @@ p {
     width: 50%;
     justify-content: center;
   }
+  .menu-wrap {
+    margin-bottom: 5px;
+  }
   .menu-wrap .logo {
     position: absolute;
     left: 0;
@@ -1245,6 +1256,12 @@ p {
   }
   .header-main h1 {
     font-size: 60px;
+  }
+  .footer-top__item {
+    width: 27%;
+  }
+  .footer-top__item:first-child {
+    width: 15%;
   }
 }
 @media (max-width: 991px) {
@@ -1438,6 +1455,16 @@ p {
   .menu-list__link {
     padding: 13px 20px;
   }
+  .footer-top {
+    flex-wrap: wrap;
+    row-gap: 25px;
+  }
+  .footer-top__item {
+    width: 50%;
+  }
+  .footer-top__item:first-child {
+    width: 50%;
+  }
 }
 @media (max-width: 767px) {
   .nb-container {
@@ -1482,6 +1509,9 @@ p {
     width: 100%;
     text-align: center;
   }
+  .footer-top__item {
+    padding: 0 5px;
+  }
 }
 @media (max-width: 539px) {
   .nb-container {
@@ -1517,5 +1547,14 @@ p {
   .menu-wrap .accent-btn {
     left: 12px;
     top: 258px;
+  }
+  .footer-top {
+    flex-direction: column;
+  }
+  .footer-top__item {
+    width: 100%;
+  }
+  .footer-top__item:first-child {
+    width: 100%;
   }
 }
