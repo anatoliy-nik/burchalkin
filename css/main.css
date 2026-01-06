@@ -310,7 +310,7 @@ p {
 /* --------s-popular-------- */
 .s-pricelinks {
   position: relative;
-  padding: 15px 0 40px 0;
+  padding: 15px 0 35px 0;
 }
 .s-pricelinks::before {
   content: "";
@@ -322,9 +322,10 @@ p {
 }
 .s-pricelinks h2 {
   text-align: center;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 400;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  line-height: 1.3;
 }
 
 .pricelinks-list {
@@ -379,24 +380,19 @@ p {
 
 /* --------welcome-------- */
 .s-welcome {
-  padding: 60px 0;
+  padding: 50px 0;
   background: #fbf9ef;
   position: relative;
-}
-.s-welcome__text {
-  width: 635px;
 }
 .s-welcome h2 {
   font-size: 42px;
   font-weight: 400;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
+  line-height: 1.3;
 }
 .s-welcome__text {
+  width: 50%;
   font-size: 20px;
-  z-index: 1;
-}
-.s-welcome__text p + p {
-  margin-top: 28px;
 }
 .s-welcome .nb-container {
   position: relative;
@@ -405,19 +401,20 @@ p {
   position: absolute;
   z-index: 1;
   right: 35px;
-  bottom: -60px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .s-welcome__img img {
   width: 450px;
-  height: 570px;
+  height: 530px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .s-welcome__out-right {
   position: absolute;
-  top: 60px;
+  top: 50px;
   right: 0;
-  bottom: 60px;
+  bottom: 50px;
   width: 43%;
   background-color: #ebe4d4;
   z-index: 0;
@@ -425,7 +422,7 @@ p {
 
 /* --------write-us-------- */
 .s-writeus {
-  padding: 70px 0;
+  padding: 50px 0;
   background-color: #fbf9ef;
 }
 
@@ -444,7 +441,7 @@ p {
   font-weight: 400;
   margin-bottom: 15px;
   text-align: center;
-  line-height: 1;
+  line-height: 1.3;
 }
 .main-form__input-wrap {
   display: flex;
@@ -485,6 +482,14 @@ p {
   color: #1e2a2a;
   display: block;
   margin: 0 auto;
+}
+
+.modal a.close-modal {
+  background-image: url(../img/icons/close.svg);
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
 }
 
 /* --------s-uslugi-------- */
@@ -1230,6 +1235,12 @@ p {
   .footer-top__item {
     width: 23%;
   }
+  .s-welcome__text {
+    width: 55%;
+  }
+  .pricelinks-list__link {
+    height: 260px;
+  }
 }
 @media (max-width: 1199px) {
   .nb-container {
@@ -1262,6 +1273,25 @@ p {
   }
   .footer-top__item:first-child {
     width: 15%;
+  }
+  .s-welcome__text {
+    width: 62%;
+  }
+  .s-welcome__img {
+    right: 0;
+  }
+  .s-welcome__img img {
+    width: 340px;
+    height: 430px;
+  }
+  .s-welcome__out-right {
+    width: 36%;
+  }
+  .pricelinks-list__item-title {
+    font-size: 23px;
+  }
+  .pricelinks-list__link {
+    height: 215px;
   }
 }
 @media (max-width: 991px) {
@@ -1367,87 +1397,6 @@ p {
   .menu-list__item:last-child {
     border-bottom: none;
   }
-  .menu-list__item--submenu > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .menu-list__item--submenu:hover .submenu-list {
-    display: none;
-  }
-  .menu-list__item--submenu > div > a::after {
-    display: none;
-  }
-  .menu-list__item--submenu {
-    /* flex-direction: column;
-    это вроде не нужно */
-  }
-  .menu-list__item--submenu:hover .menu-list__link {
-    color: #ecf0f1;
-  }
-  .menu-list__item--submenu .menu-list__link:hover {
-    background-color: #2c3e50;
-    color: #dfd684;
-  }
-  .toggle-submenu {
-    display: flex !important;
-    width: 44px;
-    height: 44px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border-left: 1px solid #2c3e50;
-  }
-  .toggle-submenu:hover, .toggle-submenu:focus {
-    outline: none;
-    background-color: #2c3e50;
-  }
-  .toggle-submenu:hover .submenu-icon, .toggle-submenu:focus .submenu-icon {
-    fill: #dfd684;
-  }
-  .toggle-submenu .submenu-icon {
-    width: 30px;
-    height: 30px;
-    fill: #ecf0f1;
-    display: block;
-  }
-  .toggle-submenu .submenu-icon--closed {
-    display: block !important;
-  }
-  .toggle-submenu .submenu-icon--open {
-    display: none !important;
-  }
-  .toggle-submenu.open .submenu-icon--closed {
-    display: none !important;
-  }
-  .toggle-submenu.open .submenu-icon--open {
-    display: block !important;
-  }
-  .submenu-list {
-    display: none;
-    background-color: #2c3e50;
-    position: relative;
-    min-width: auto;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-  .submenu-list.open {
-    display: flex !important;
-  }
-  .submenu-list__item {
-    border-bottom: 1px solid #34495e;
-  }
-  .submenu-list__item:last-child {
-    border-bottom: none;
-  }
-  .submenu-list__link {
-    padding: 13px 20px 13px 20px;
-  }
   /* потом убрать, когда будет двух уровневое меню */
   .menu-list__item + .menu-list__item {
     margin-left: 0;
@@ -1464,6 +1413,42 @@ p {
   }
   .footer-top__item:first-child {
     width: 50%;
+  }
+  .s-welcome {
+    padding: 35px 0px;
+  }
+  .s-welcome h2 {
+    font-size: 30px;
+  }
+  .s-welcome__text {
+    font-size: 16px;
+  }
+  .s-welcome__img img {
+    width: 260px;
+    height: 340px;
+  }
+  .s-welcome__out-right {
+    top: 35px;
+    bottom: 35px;
+  }
+  .s-pricelinks h2 {
+    font-size: 30px;
+  }
+  .pricelinks-list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+  .pricelinks-list__link {
+    height: 120px;
+  }
+  .s-writeus {
+    padding: 35px 0;
+  }
+  .main-form {
+    width: 100%;
+  }
+  .main-form h2 {
+    font-size: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -1498,7 +1483,7 @@ p {
     width: auto;
   }
   .header-main h1 {
-    line-height: 1;
+    line-height: 1.3;
     margin-bottom: 20px;
   }
   .header-main h2 {
@@ -1511,6 +1496,22 @@ p {
   }
   .footer-top__item {
     padding: 0 5px;
+  }
+  .s-welcome__img {
+    position: static;
+    transform: none;
+  }
+  .s-welcome__text {
+    width: 100%;
+  }
+  .s-welcome__out-right {
+    display: none;
+  }
+  .s-welcome img {
+    margin: 0 auto;
+  }
+  .pricelinks-list__link {
+    height: 160px;
   }
 }
 @media (max-width: 539px) {
@@ -1556,5 +1557,22 @@ p {
   }
   .footer-top__item:first-child {
     width: 100%;
+  }
+  .pricelinks-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .pricelinks-list__link {
+    height: 120px;
+  }
+  .main-form__input-wrap {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  .main-form.modal {
+    padding: 18px 12px;
+  }
+  .main-form__inner {
+    padding: 12px;
+    margin-bottom: 12px;
   }
 }
