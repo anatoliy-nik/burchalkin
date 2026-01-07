@@ -494,15 +494,16 @@ p {
 
 /* --------s-uslugi-------- */
 .s-uslugi {
-  padding: 35px 0 70px 0;
+  padding: 35px 0 50px 0;
   background-color: #404fac;
 }
 .s-uslugi h2 {
   font-weight: 400;
-  font-size: 48px;
+  font-size: 42px;
   text-align: center;
   margin-bottom: 20px;
   color: #ebe4d4;
+  line-height: 1.3;
 }
 
 .uslugi-list {
@@ -530,7 +531,6 @@ p {
   left: 0;
   bottom: 0;
   right: 0;
-  border: 1px solid #bc5f04;
 }
 .uslugi-list h3, .uslugi-list h4 {
   font-weight: 400;
@@ -669,14 +669,15 @@ p {
 
 /* --------s-concept-------- */
 .s-concept {
-  padding: 35px 0 70px 0;
+  padding: 35px 0 50px 0;
   background-color: #fbf9ef;
 }
 .s-concept h2 {
   font-weight: 400;
-  font-size: 48px;
+  font-size: 42px;
   text-align: center;
   margin-bottom: 20px;
+  line-height: 1.3;
 }
 
 .concept {
@@ -778,18 +779,19 @@ p {
   background-size: cover;
 }
 .s-info__content {
-  width: 88%;
+  width: 86%;
   font-size: 20px;
   color: #ebe4d4;
   border: 1px solid #bc5f04;
   border-right: none;
-  padding: 38px;
+  padding: 15px 30px;
   padding-right: 10%;
 }
-.s-info h3 {
-  font-weight: 700;
-  font-size: 36px;
-  margin-bottom: 20px;
+.s-info h2 {
+  font-weight: 400;
+  font-size: 42px;
+  margin-bottom: 15px;
+  line-height: 1.3;
 }
 
 /* --------s-info-------- */
@@ -927,13 +929,14 @@ p {
 
 /* --------s-office-------- */
 .s-office {
-  padding: 35px 0 70px 0;
+  padding: 35px 0 50px 0;
   text-align: center;
 }
 .s-office h2 {
   font-weight: 400;
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 42px;
+  margin-bottom: 15px;
+  line-height: 1.3;
 }
 .s-office__text {
   font-size: 20px;
@@ -944,7 +947,7 @@ p {
   padding: 0 95px;
 }
 .office__item {
-  margin-right: 24px;
+  margin: 0 12px;
 }
 .office__item img {
   width: 164px;
@@ -1241,6 +1244,9 @@ p {
   .pricelinks-list__link {
     height: 260px;
   }
+  .office {
+    padding: 0 99px;
+  }
 }
 @media (max-width: 1199px) {
   .nb-container {
@@ -1292,6 +1298,12 @@ p {
   }
   .pricelinks-list__link {
     height: 215px;
+  }
+  .concept div {
+    font-size: 18px;
+  }
+  .office {
+    padding: 0 103px;
   }
 }
 @media (max-width: 991px) {
@@ -1440,6 +1452,7 @@ p {
   }
   .pricelinks-list__link {
     height: 120px;
+    justify-content: center;
   }
   .s-writeus {
     padding: 35px 0;
@@ -1449,6 +1462,45 @@ p {
   }
   .main-form h2 {
     font-size: 30px;
+  }
+  .uslugi-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .s-uslugi {
+    padding: 35px 0;
+  }
+  .s-uslugi h2 {
+    font-size: 30px;
+  }
+  .s-concept {
+    padding: 35px 0;
+  }
+  .s-concept h2 {
+    font-size: 30px;
+  }
+  .concept {
+    gap: 12px;
+  }
+  .concept div {
+    font-size: 16px;
+  }
+  .s-info h2 {
+    font-size: 30px;
+  }
+  .s-info__content {
+    font-size: 16px;
+  }
+  .s-office {
+    padding: 35px 0;
+  }
+  .s-office h2 {
+    font-size: 30px;
+  }
+  .s-office__text {
+    font-size: 16px;
+  }
+  .office {
+    padding: 0 77px;
   }
 }
 @media (max-width: 767px) {
@@ -1513,6 +1565,39 @@ p {
   .pricelinks-list__link {
     height: 160px;
   }
+  .uslugi-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .concept {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 120px);
+  }
+  .concept .concept__img {
+    display: none;
+  }
+  .concept div {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 0 12px;
+  }
+  .concept div[class*=left] {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .s-info__right {
+    display: none;
+  }
+  .s-info__left {
+    width: 100%;
+  }
+  .s-info__content {
+    width: 100%;
+    padding: 15px 15px 0 15px;
+    border-bottom: none;
+  }
+  .office {
+    padding: 0 0;
+  }
 }
 @media (max-width: 539px) {
   .nb-container {
@@ -1574,5 +1659,11 @@ p {
   .main-form__inner {
     padding: 12px;
     margin-bottom: 12px;
+  }
+  .uslugi-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .uslugi-list__link {
+    height: 100px;
   }
 }

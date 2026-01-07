@@ -15,6 +15,11 @@ $(function(){
         $btn.toggleClass('open');
     });
 
+    // нужно инициализировать до Slick, чтобы можно было удалить клоны из Fancybox
+    Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+    });
+
     $('.s-news .news-list').slick({
         arrows: true,
         dots: true,
@@ -32,18 +37,30 @@ $(function(){
         autoplay: false
     });
 
-    $('.office').slick({
+    // чтобы Fancybox не дублировал клонированные слайды (фото), 
+    // нужно удалить data-fancybox у клонов сразу после инициализации Slick
+    $('.office').on('init', function() {
+    $('.slick-cloned [data-fancybox]').removeAttr('data-fancybox');
+    }).slick({
         arrows: true,
         dots: false,
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 1,
         variableWidth: true,
-        autoplay: false
-    });
-
-    Fancybox.bind("[data-fancybox]", {
-    // Your custom options
+        autoplay: false,
+        responsive: [
+            {
+            breakpoint: 768,
+            settings: {
+                centerMode: true,
+                arrows: false
+                // slidesToShow: 1,
+                // variableWidth: false,
+                // если не указать, не будет работать 1 слайд
+            }
+            }
+        ]
     });
 
     // модальное окно
