@@ -1003,14 +1003,15 @@ p {
 }
 
 /* --------page-------- */
-.main-page .nb-container {
-  padding: 40px 0 50px 0;
+.s-page {
+  padding: 25px 0 35px 0;
 }
-.main-page h1 {
+.s-page h1 {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 45px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+  line-height: 1.1;
 }
 
 /* --------page-news-------- */
@@ -1049,16 +1050,21 @@ p {
 }
 
 /* --------page-contacts-------- */
+.accent-btn.contacts-page {
+  display: block;
+  margin: 0 auto 40px auto;
+}
+
 .contacts-info {
   border: 8px solid #e3d9c4;
   background-color: #fbf9ef;
   position: relative;
-  z-index: 1;
+  z-index: -1;
   padding: 30px;
   text-align: center;
   width: 636px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .contacts-info::before {
   content: "";
@@ -1103,10 +1109,12 @@ p {
 .contacts {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
 }
 .contacts h2 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 25px;
   margin-bottom: 15px;
   line-height: 1;
 }
@@ -1237,20 +1245,19 @@ p {
   .menu-wrap {
     flex-direction: column;
     margin-bottom: 25px;
+    padding-left: 0;
   }
   .top-contacts {
     flex-wrap: wrap;
     row-gap: 15px;
     margin-bottom: 20px;
+    padding-left: 0;
   }
   .top-contacts__item:last-child {
     width: 100%;
   }
   .social-list {
     margin: 0 auto;
-  }
-  .menu-wrap {
-    padding-left: 110px;
   }
   .menu-wrap .accent-btn {
     margin-left: 0;
@@ -1266,6 +1273,9 @@ p {
   }
   .pricelinks-list__link {
     height: 260px;
+  }
+  .header-page {
+    height: 272px;
   }
 }
 @media (max-width: 1199px) {
@@ -1419,6 +1429,7 @@ p {
     left: 0;
     right: 12px;
     width: auto;
+    z-index: 10;
     /* Отключаем hover-эффекты на мобильных устройствах */
   }
   .menu-list__item {
@@ -1534,6 +1545,14 @@ p {
   .s-reviews h2 {
     font-size: 30px;
   }
+  .contacts {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+  .contacts__item:last-child {
+    grid-column: 1/3;
+    height: 300px;
+  }
 }
 @media (max-width: 767px) {
   .nb-container {
@@ -1632,10 +1651,14 @@ p {
   }
   .work-list {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     row-gap: 24px;
   }
   .work-list h3 {
     font-size: 16px;
+  }
+  .contacts-info {
+    width: 100%;
   }
 }
 @media (max-width: 539px) {
@@ -1711,9 +1734,10 @@ p {
   }
   .concept {
     grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
   }
   .concept div {
-    font-size: 15px;
+    padding: 12px 12px;
   }
   #office-slider.splide {
     padding: 0 0;
@@ -1739,5 +1763,18 @@ p {
   }
   .s-reviews {
     padding: 35px 0 55px 0;
+  }
+  .header-page {
+    height: 332px;
+  }
+  .contacts {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  .contacts__item {
+    text-align: center;
+  }
+  .contacts__item:last-child {
+    grid-column: auto;
   }
 }

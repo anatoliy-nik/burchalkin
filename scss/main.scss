@@ -965,15 +965,15 @@
 
 /* --------page-------- */
 
-.main-page {
-    .nb-container {
-        padding: 40px 0 50px 0;
-    }
+
+.s-page {
+    padding: 25px 0 35px 0;
     h1 {
         font-weight: 600;
-        font-size: 48px;
+        font-size: 45px;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
+        line-height: 1.1;
     }
 }
 
@@ -1022,16 +1022,21 @@
 
 /* --------page-contacts-------- */
 
+.accent-btn.contacts-page {
+        display: block;
+        margin: 0 auto 40px auto;
+    }
+
 .contacts-info {
     border: 8px solid #e3d9c4;
     background-color: #fbf9ef;
     position: relative;
-    z-index: 1;
+    z-index: -1;
     padding: 30px;
     text-align: center;
     width: 636px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     &::before {
         content: "";
         position: absolute;
@@ -1076,9 +1081,10 @@
 .contacts {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
+    column-gap: 24px;
     h2 {
         font-weight: 700;
-        font-size: 32px;
+        font-size: 25px;
         margin-bottom: 15px;
         line-height: 1;
     }
