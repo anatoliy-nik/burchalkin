@@ -29,34 +29,20 @@ $(function(){
         arrows: true,
         dots: true,
         infinite: false,
-        autoplay: false
+        autoplay: false,
+        responsive: [
+            {
+            breakpoint: 540,
+            settings: {
+                // slidesToShow: 3,
+                // slidesToScroll: 3,
+                // infinite: true,
+                // dots: true
+                arrows: false
+                }
+            }
+        ]
     });
-
-    // чтобы Fancybox не дублировал клонированные слайды (фото), 
-    // нужно удалить data-fancybox у клонов сразу после инициализации Slick
-    // $('.office').on('init', function() {
-    // $('.slick-cloned [data-fancybox]').removeAttr('data-fancybox');
-    // }).slick({
-    //     arrows: true,
-    //     dots: false,
-    //     infinite: true,
-    //     slidesToShow: 6,
-    //     slidesToScroll: 1,
-    //     variableWidth: true,
-    //     autoplay: false,
-    //     responsive: [
-    //         {
-    //         breakpoint: 768,
-    //         settings: {
-    //             centerMode: true,
-    //             arrows: false
-    //             // slidesToShow: 1,
-    //             // variableWidth: false,
-    //             // если не указать, не будет работать 1 слайд
-    //         }
-    //         }
-    //     ]
-    // });
 
     // модальное окно для формы связи
     $('[data-modal]').on('click', function() {
@@ -64,6 +50,7 @@ $(function(){
       return false;
     });
 
+    // слайдер фото офиса
     new Splide('#office-slider', {
         type: 'slide',      // ← не 'loop'!
         rewind: true,       // ← включает "возврат к началу"
@@ -99,6 +86,7 @@ $(function(){
         }
     }).mount(window.splide.Extensions);
     
+    // всплывашка для фото офиса 
     Fancybox.bind("[data-fancybox]", {
     // Your custom options
     });
