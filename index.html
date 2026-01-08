@@ -7,6 +7,7 @@
     <title>Нотариус Бурчалкин М.Л.</title>
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/splide.min.css">
     <link rel="stylesheet" href="css/jquery.modal.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -368,58 +369,68 @@
                 <div class="s-office__text">
                     <p>Ждем вас по адресу: Санкт-Петербург, Лермонтовский проспект, 18, 1-й этаж</p>
                 </div>
-                <ul class="office">
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-1.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-1.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-2.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-2.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-4.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-4.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-5.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-5.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-6.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-6.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-7.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-7.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-8.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-8.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-9.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-9.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-10.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-10.jpg" alt="">
-                        </a>
-                    </li>
-                    <li class="office__item">
-                        <a class="office__link" href="img/office/office-11.jpg" data-fancybox="gallery">
-                            <img src="img/office/office-11.jpg" alt="">
-                        </a>
-                    </li>
-                </ul>
+
+                <div class="splide" id="office-slider">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev"></button>
+                        <button class="splide__arrow splide__arrow--next"></button>
+                    </div>
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <a href="img/office/office-1.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-1.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="img/office/office-2.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-2.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="img/office/office-4.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-4.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="img/office/office-5.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-5.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="img/office/office-6.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-6.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="img/office/office-7.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-7.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="img/office/office-8.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-8.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="img/office/office-9.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-9.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="img/office/office-10.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-10.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="img/office/office-11.jpg" data-fancybox="gallery">
+                                    <img src="img/office/office-11.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -538,6 +549,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/fancybox.umd.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/splide-extension-grid.min.js"></script>
     <script src="js/jquery.modal.min.js"></script>
     <script src="js/main.js"></script>
 </body>
