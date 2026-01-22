@@ -457,6 +457,27 @@
             margin-bottom: 10px;
         }
     }
+    .notary-action {
+        flex-direction: column;
+        &__left {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        &__links {
+            // flex-direction: row;
+            // justify-content: space-between;
+        }
+        &__links-link {
+            font-size: 16px;
+        }
+        &__links-item + .notary-action__links-item {
+            margin-left: 15px;
+        }
+        &__content {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -777,13 +798,13 @@
     .contacts__item:last-child {
         grid-column: auto;
     }
-    .uslugi-page {
+    .s-page {
         .uslugi-list {
             grid-template-columns: repeat(1, 1fr);
         }
         .uslugi-list__link {
             height: auto;
-            padding: 15px 5px;
+            padding: 5px 5px;
         }
     }
     .s-page {
@@ -805,5 +826,11 @@
     }
     .price-group__item-row span:last-child, .price-group__subtitle span:last-child {
         font-size: 16px;
+    }
+    .s-page ul.uslugi-list {
+        margin-bottom: 25px;
+    }
+    .notary-action__links-item {
+        margin-bottom: 7px;
     }
 }

@@ -969,18 +969,18 @@
 
 
 .s-page {
-    padding: 15px 0 35px 0;
+    padding: 25px 0 35px 0;
     h1 {
         font-weight: 600;
         font-size: 42px;
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         line-height: 1.1;
     }
     h2 {
         font-weight: 400;
         font-size: 30px;
-        text-align: center;
+        // text-align: center;
         color: $black-color;
         margin-bottom: 20px;
         line-height: 1.1;
@@ -998,19 +998,35 @@
     }
     ol, ul, li {
         list-style-type: initial;
-        margin-left: 20px;
     }
     ul {
-        margin-bottom: 20px;
+        margin-bottom: 35px;
+        margin-left: 20px;
     }
     a {
         color: #404fac;
-        text-decoration: none;
+        // text-decoration: none;
         &:hover {
-            text-decoration: underline;
+            // text-decoration: underline;
+        }
+    }
+    ul.uslugi-list {
+        // list-style-type: none;
+        margin-left: 0;
+        li {
+            list-style-type: none;
+        }
+    }
+    ul.notary-action__links {
+        list-style-type: none;
+        margin-left: 0;
+        margin-bottom: 15px;
+        li {
+            list-style-type: none;
         }
     }
 }
+
 
 /* --------page-news-------- */
 
@@ -1170,6 +1186,42 @@
     }
 }
 
+/* -------notary-action-page-------- */
+
+.notary-action {
+    display: flex;
+    justify-content: space-between;
+    .price-group {
+        margin-bottom: 0;
+    }
+    &__left {
+        width: 300px;
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    &__links-item {
+        margin-bottom: 10px;
+    }
+    &__links-link {
+        color: #404fac;
+        font-size: 20px;
+        // text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__content {
+        width: 77%;
+    }
+    .main-form {
+        margin-top: 25px;
+    }
+}
+
+
 /* --------ceny-page-------- */
 
     .price-group {
@@ -1240,7 +1292,7 @@
         ul {
             display: flex;
             align-items: center;
-            font-weight: 600;
+            // font-weight: 600;
             font-size: 20px;
             text-align: center;
         }
