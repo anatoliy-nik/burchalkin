@@ -1068,6 +1068,20 @@ p {
   background-color: #e3d9c4;
   border: none;
 }
+.s-page ol, .s-page ul, .s-page li {
+  list-style-type: initial;
+  margin-left: 20px;
+}
+.s-page ul {
+  margin-bottom: 20px;
+}
+.s-page a {
+  color: #404fac;
+  text-decoration: none;
+}
+.s-page a:hover {
+  text-decoration: underline;
+}
 
 /* --------page-news-------- */
 .main-page .news-list {
@@ -1214,7 +1228,7 @@ p {
 
 /* --------ceny-page-------- */
 .price-group {
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 }
 
 .price-group__subtitle {
@@ -1252,6 +1266,7 @@ p {
 
 .price-group__item-row {
   margin-bottom: 5px;
+  font-size: 13px;
 }
 
 .price-group__item-row, .price-group__subtitle {
@@ -1260,7 +1275,7 @@ p {
 }
 
 .price-group__item-row span, .price-group__subtitle span {
-  min-width: 150px;
+  width: 185px;
   text-align: center;
   background-color: #ebe4d4;
   padding: 5px 5px;
@@ -1274,8 +1289,38 @@ p {
 }
 
 .price-group__item-row span:last-child, .price-group__subtitle span:last-child {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
+}
+
+.go-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.go-price ul, .go-price li {
+  list-style-type: none;
+  margin: 0;
+}
+.go-price ul {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+.go-price li + li {
+  margin-left: 25px;
+}
+.go-price h2 {
+  margin-bottom: 0;
+  margin-right: 25px;
+}
+.go-price a {
+  text-decoration: underline;
+}
+.go-price a:hover {
+  text-decoration: none;
 }
 
 /* --------footer-------- */
@@ -1439,6 +1484,12 @@ p {
   }
   .office {
     padding: 0 103px;
+  }
+  .go-price h2 {
+    margin-right: 10px;
+  }
+  .go-price li + li {
+    margin-left: 10px;
   }
 }
 @media (max-width: 991px) {
@@ -1744,6 +1795,13 @@ p {
     grid-column: 1/3;
     height: 300px;
   }
+  .go-price {
+    flex-direction: column;
+  }
+  .go-price h2 {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 767px) {
   .nb-container {
@@ -1851,15 +1909,28 @@ p {
   .contacts-info {
     width: 100%;
   }
+  .go-price ul {
+    flex-direction: column;
+    font-size: 16px;
+  }
+  .go-price li {
+    margin-bottom: 8px;
+  }
 }
 @media (max-width: 539px) {
   .nb-container {
     padding: 0 12px;
     max-width: 100%;
   }
+  .main-nav {
+    margin-bottom: 0;
+  }
   .header-main {
-    min-height: 650px;
+    min-height: 600px;
     height: auto;
+  }
+  .header-main h1 {
+    margin-top: 25px;
   }
   .burger-btn {
     margin-right: 0;
@@ -1868,24 +1939,23 @@ p {
     left: 0;
     right: 0;
   }
-  .top-contacts {
-    height: 241px;
-  }
-  .top-contacts__item {
-    padding-left: 144px;
+  .top-contacts__item:nth-child(2) {
+    display: none;
   }
   .top-contacts svg {
     display: none;
   }
   .logo-bg {
     left: 12px;
+    width: 100px;
   }
   .menu-wrap .logo {
-    left: 36px;
+    left: 19px;
+    top: 30px;
   }
   .menu-wrap .accent-btn {
     left: 12px;
-    top: 258px;
+    top: 197px;
   }
   .footer-top {
     flex-direction: column;
@@ -1956,7 +2026,7 @@ p {
     padding: 35px 0 55px 0;
   }
   .header-page {
-    height: 332px;
+    height: 254px;
   }
   .contacts {
     grid-template-columns: repeat(1, 1fr);
@@ -1979,7 +2049,6 @@ p {
   }
   .price-group__item-row span, .price-group__subtitle span {
     font-size: 13px;
-    min-width: 89px;
   }
   .price-group__item-row span:last-child, .price-group__subtitle span:last-child {
     font-size: 16px;

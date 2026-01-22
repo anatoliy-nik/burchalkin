@@ -996,6 +996,20 @@
         background-color: #e3d9c4;
         border: none;
     }
+    ol, ul, li {
+        list-style-type: initial;
+        margin-left: 20px;
+    }
+    ul {
+        margin-bottom: 20px;
+    }
+    a {
+        color: #404fac;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 /* --------page-news-------- */
@@ -1159,7 +1173,7 @@
 /* --------ceny-page-------- */
 
     .price-group {
-      margin-bottom: 45px;
+      margin-bottom: 35px;
     }
     .price-group__subtitle {
       background-color: #ebe4d4;
@@ -1193,13 +1207,14 @@
     }
     .price-group__item-row {
         margin-bottom: 5px;
+        font-size: 13px;
     }
     .price-group__item-row, .price-group__subtitle {
         display: flex;
         justify-content: end;
     }
     .price-group__item-row span, .price-group__subtitle span {
-        min-width: 150px;
+        width: 185px;
         text-align: center;
         background-color: #ebe4d4;
         padding: 5px 5px;
@@ -1211,9 +1226,39 @@
         margin-left: 5px;
     }
     .price-group__item-row span:last-child, .price-group__subtitle span:last-child {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
     }
+    .go-price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        ul,li {
+            list-style-type: none;
+            margin: 0;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 20px;
+            text-align: center;
+        }
+        li + li {
+            margin-left: 25px;
+        }
+        h2 {
+            margin-bottom: 0;
+            margin-right: 25px;
+        }
+        a {
+            text-decoration: underline;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
 
 /* --------footer-------- */
 
