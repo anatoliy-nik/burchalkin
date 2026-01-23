@@ -996,34 +996,11 @@
         background-color: #e3d9c4;
         border: none;
     }
-    ol, ul, li {
-        list-style-type: initial;
-    }
-    ul {
-        margin-bottom: 35px;
-        margin-left: 20px;
+    .uslugi-list {
+        margin-bottom: 25px;
     }
     a {
         color: #404fac;
-        // text-decoration: none;
-        &:hover {
-            // text-decoration: underline;
-        }
-    }
-    ul.uslugi-list {
-        // list-style-type: none;
-        margin-left: 0;
-        li {
-            list-style-type: none;
-        }
-    }
-    ul.notary-action__links {
-        list-style-type: none;
-        margin-left: 0;
-        margin-bottom: 15px;
-        li {
-            list-style-type: none;
-        }
     }
 }
 
@@ -1152,9 +1129,9 @@
 
 /* --------uslugi-page-------- */
 .uslugi-page {
-    .uslugi-list {
-        margin-bottom: 25px;
-    }
+    // .uslugi-list {
+    //     margin-bottom: 25px;
+    // }
     // .uslugi-list__link {
     //     background-color: #e3d9c4;
     //     border: none;

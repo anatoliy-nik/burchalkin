@@ -108,7 +108,7 @@ body {
   max-width: 1296px;
   width: 100%;
   margin: 0 auto;
-  border: 1px dotted red;
+  border: 1px dotted gray;
 }
 
 .accent-btn {
@@ -1067,29 +1067,11 @@ p {
   background-color: #e3d9c4;
   border: none;
 }
-.s-page ol, .s-page ul, .s-page li {
-  list-style-type: initial;
-}
-.s-page ul {
-  margin-bottom: 35px;
-  margin-left: 20px;
+.s-page .uslugi-list {
+  margin-bottom: 25px;
 }
 .s-page a {
   color: #404fac;
-}
-.s-page ul.uslugi-list {
-  margin-left: 0;
-}
-.s-page ul.uslugi-list li {
-  list-style-type: none;
-}
-.s-page ul.notary-action__links {
-  list-style-type: none;
-  margin-left: 0;
-  margin-bottom: 15px;
-}
-.s-page ul.notary-action__links li {
-  list-style-type: none;
 }
 
 /* --------page-news-------- */
@@ -1207,9 +1189,6 @@ p {
 }
 
 /* --------uslugi-page-------- */
-.uslugi-page .uslugi-list {
-  margin-bottom: 25px;
-}
 .uslugi-page__box {
   position: relative;
   padding-bottom: 25px;
@@ -2111,8 +2090,8 @@ p {
   .price-group__item-row span:last-child, .price-group__subtitle span:last-child {
     font-size: 16px;
   }
-  .s-page ul.uslugi-list {
-    margin-bottom: 25px;
+  .notary-action__links {
+    margin-bottom: 10px;
   }
   .notary-action__links-item {
     margin-bottom: 7px;
