@@ -15,13 +15,23 @@ $(function(){
         $btn.toggleClass('open');
     });
 
-    $('.s-news .news-list').slick({
-        arrows: true,
-        dots: true,
+    // $('.s-news .news-list').slick({
+    //     arrows: true,
+    //     dots: true,
+    //     infinite: false,
+    //     slidesToShow: 2,
+    //     slidesToScroll: 2,
+    //     variableWidth: true,
+    //     autoplay: false
+    // });
+
+    $('.s-news--single .nb-container').slick({
+        arrows: false,
+        dots: false,
         infinite: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        variableWidth: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // variableWidth: true,
         autoplay: false
     });
 

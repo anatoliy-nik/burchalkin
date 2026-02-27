@@ -13,6 +13,7 @@
         row-gap: 15px;
         margin-bottom: 20px;
         padding-left: 0;
+        z-index: 1;
         &__item:last-child {
             width: 100%;
         }
@@ -44,6 +45,9 @@
     .header-page  {
         height: 272px;
     }
+    .s-page h1 {
+        padding: 0;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -53,6 +57,7 @@
     .top-contacts {
         padding: 15px 0px;
         padding-left: 130px;
+        z-index: -1;
         &__item {
             width: 50%;
             justify-content: center;
@@ -64,7 +69,7 @@
     .menu-wrap .logo {
         position: absolute;
         left: 0;
-        top: 75px;
+        top: 56px;
     }
     .menu-wrap .accent-btn {
         margin-left: 0;
@@ -462,18 +467,19 @@
         &__left {
             width: 100%;
             text-align: center;
-            margin-bottom: 0;
+            // margin-bottom: 0;
         }
         &__links {
             // flex-direction: row;
             // justify-content: space-between;
+            flex-direction: column;
         }
         &__links-link {
             font-size: 16px;
         }
-        &__links-item + .notary-action__links-item {
-            margin-left: 15px;
-        }
+        // &__links-item + .notary-action__links-item {
+        //     margin-left: 15px;
+        // }
         &__content {
             width: 100%;
         }
@@ -662,6 +668,14 @@
             margin-bottom: 8px;
         }
     }
+    .price-section__item {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 0;
+    }
+    .price-section__item::after {
+        margin: 0;
+    }
 }
 
 @media (max-width: 539px) {
@@ -703,7 +717,9 @@
     }
     .logo-bg {
         left: 12px;
-        width: 100px;
+        // width: 100px;
+        transform: scale(0.745); /* ≈ 2/3 */
+        transform-origin: top left; /* чтобы не "уехал" */
     }
     .menu-wrap .logo {
         left: 19px;
@@ -777,6 +793,7 @@
     }
     .reviews-list__item-text {
         padding: 0 0;
+        font-size: 16px;
     }
     .reviews-list__item-text::before, .reviews-list__item-text::after {
         content: none;
@@ -804,7 +821,7 @@
         }
         .uslugi-list__link {
             height: auto;
-            padding: 5px 5px;
+            padding: 15px 5px;
         }
     }
     .s-page {
@@ -835,5 +852,8 @@
     }
     .notary-action__links-item {
         margin-bottom: 7px;
+    }
+    .s-news.s-news--single .news-list__title {
+        font-size: 23px;
     }
 }

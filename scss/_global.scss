@@ -63,8 +63,31 @@ section {
     padding: 10px 30px;
     font-size: 16px;
     color: #5b2333;
+    position: relative;
+    overflow: hidden; /* чтобы скрыть вылезающий псевдоэлемент */
+    z-index: 0;
 }
 
+.accent-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+    transition: left 0.7s ease-out;
+    pointer-events: none;
+}
+
+.accent-btn:hover::before {
+    left: 120%;
+}
 p {
     margin-bottom: 20px;
 }
