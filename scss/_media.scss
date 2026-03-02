@@ -116,10 +116,10 @@
     }
     .go-price {
         h2 {
-        margin-right: 10px;
+        // margin-right: 10px;
         }
         li + li {
-            margin-left: 10px;
+            // margin-left: 10px;
         }
     }
 }
@@ -665,7 +665,7 @@
             font-size: 16px;
         }
         li {
-            margin-bottom: 8px;
+            // margin-bottom: 8px;
         }
     }
     .price-section__item {
@@ -855,5 +855,11 @@
     }
     .s-news.s-news--single .news-list__title {
         font-size: 23px;
+    }
+    .blocker {
+        padding: 12px;
+    }
+    #go-feedback.modal {
+        width: 100%;
     }
 }
